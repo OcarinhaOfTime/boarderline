@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsnqo4sstittx"]
+[gd_scene load_steps=7 format=3 uid="uid://bsnqo4sstittx"]
 
 [ext_resource type="Shader" path="res://shaders/board.gdshader" id="1_g8cl1"]
 [ext_resource type="Texture2D" uid="uid://d4dvfdyunsutt" path="res://sprites/icon.svg" id="2_s6pg1"]
 [ext_resource type="Script" path="res://scripts/board.gd" id="3_cb5b1"]
+[ext_resource type="Texture2D" uid="uid://bl8qsm78t5fps" path="res://sprites/queen.png" id="4_loyb1"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="5_gjqh4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nk1st"]
 shader = ExtResource("1_g8cl1")
-shader_parameter/size = 4.0
+shader_parameter/size = 2.0
 
 [node name="main" type="Node2D"]
 
@@ -16,3 +18,10 @@ shader_parameter/size = 4.0
 material = SubResource("ShaderMaterial_nk1st")
 texture = ExtResource("2_s6pg1")
 script = ExtResource("3_cb5b1")
+size = 2
+
+[node name="player" type="Sprite2D" parent="."]
+position = Vector2(-32, -33)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_loyb1")
+script = ExtResource("5_gjqh4")
