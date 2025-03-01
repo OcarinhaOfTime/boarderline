@@ -18,7 +18,7 @@ shader_parameter/size = 2.0
 material = SubResource("ShaderMaterial_nk1st")
 texture = ExtResource("2_s6pg1")
 script = ExtResource("3_cb5b1")
-size = 2
+size = 3
 
 [node name="player" type="Sprite2D" parent="."]
 position = Vector2(-32, -33)

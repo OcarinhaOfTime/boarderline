@@ -16,11 +16,10 @@ func _process(delta: float) -> void:
 	material.set_shader_parameter("size", size)
 
 func world2screen(p: Vector2) -> Vector2:
-	#p.y *= -1
 	p = p - p * .5
 	p.y *= -1
-	var s = sssize * size / 2
+	var s = sssize * size
 	var o = Vector2(sssize, -sssize) * -.5 * size / 2
 	var io = Vector2(s, -s) / 4
 
-	return p * s + o + io
+	return p * s + o
