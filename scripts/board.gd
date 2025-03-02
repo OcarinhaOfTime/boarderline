@@ -19,7 +19,9 @@ func world2screen(p: Vector2) -> Vector2:
 	p = p - p * .5
 	p.y *= -1
 	var s = sssize * size
-	var o = Vector2(sssize, -sssize) * -.5 * size / 2
-	var io = Vector2(s, -s) / 4
+	var w = sssize
 
-	return p * s + o
+	var o = Vector2(sssize, -sssize) * -.5 * size / 2
+	var io = Vector2(w, -w) / 4
+
+	return p * w + o + io
